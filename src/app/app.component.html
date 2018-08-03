@@ -1,38 +1,59 @@
 <div class="card" style="max-width: 800px;">
-    <p style="margin: 8px;">
-        Let's say you'd like to create a report with a data table
-        that allows a variable amount of depth to the portrayed information.
-        The data may have
-      </p>
-      
-      <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+  <p>
+    Let's say you'd like to create a report with a data table that allows a variable amount of depth to the portrayed information.
+    As an example, if we only have a single variable of interest, like daily temperature, we could take a whole month's worth
+    of data and summarize it by taking the mean value. This lets us reduce the number of rows at the cost of granularity
+    in the data. What if we wanted to display data in summarized form, but also wanted to give an option of viewing the detailed
+    data set?
+  </p>
+
+  <p>
+    That was the motivation behind this exercise. There were two things I wanted to consider here:
+  </p>
+  <ul>
+    <li>How the data should be served by server</li>
+    <li>How the data should be processed on the cliend</li>
+  </ul>
+
+  <h4>
+    Served data format
+  </h4>
+  <p>
+    Let's go back to the month's worth of temperature data example. As a starting point, we'll start off with the data being served 
+    as a simple array of values.
+  </p>
+  <div class="bg-light" style="margin-right: auto; margin-left: 8px;">
+    <prism-block [code]="codeTest" [language]="'javascript'"></prism-block>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

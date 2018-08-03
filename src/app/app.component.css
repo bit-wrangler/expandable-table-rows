@@ -1,0 +1,8 @@
+@import '~prismjs/themes/prism.css';
+p {
+  padding: 8px;
+}
+
+.card {
+  padding: 8px;
+}

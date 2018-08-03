@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { PrismComponent } from 'angular-prism';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrismComponent
   ],
   imports: [
     NgbModule.forRoot(),
